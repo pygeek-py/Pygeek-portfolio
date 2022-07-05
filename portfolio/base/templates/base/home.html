@@ -1,0 +1,1673 @@
+{% extends 'base/base.html' %}
+
+{% block body %}
+<style type="text/css">
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: Raleway;
+		width: 100%;
+		overflow-x: hidden;
+	}
+	.one {
+		width: 100%;
+		height: 100vh;
+		background: url("../media/images/portf.png");
+		margin: 0;
+		padding: 0;
+	}
+	.drop {
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+		width: 100%;
+		height: 33vh;
+		background-color: #1e242c;
+		display: none;
+	}
+	.aww {
+		width: 40%;
+		display: none;
+	}
+	.second {
+		color: white;
+		padding-top: 15%;
+	}
+	.third {
+		font-size: 40px;
+		margin-bottom: 0;
+	}
+	.thirde {
+		font-size: 28px;
+		margin-bottom: 0;
+		opacity: 0.7;
+	}
+	.thirds {
+		font-size: 18px;
+		font-weight: 80;
+		margin-top: 0;
+		opacity: 0.6;
+	}
+	.thirdse {
+		font-size: 18px;
+		font-weight: 80;
+		margin-top: 0;
+		opacity: 0.6;
+	}
+	.blu {
+		font-size: 18px;
+		font-weight: 80;
+		margin-top: 0;
+		opacity: 0.8;
+		color: red;
+	}
+	.thir {
+		font-size: 40px;
+		margin-top: 0;
+	}
+	.four {
+		width: max-content;
+		min-width: 21%;
+		height: 50px;
+		text-align: center;
+		font-size: 25px;
+		background: transparent;
+		border-color: white;
+		color: white;
+	}
+	.four:hover {
+		width: max-content;
+		min-width: 21%;
+		height: 50px;
+		text-align: center;
+		font-size: 25px;
+		background-color: red;
+		border-color: white;
+		color: white;
+	}
+	.fourths {
+		width: 43%;
+		height: max-content;
+		min-height: 50px;
+		text-align: center;
+		font-size: 18px;
+		background: transparent;
+		border-color: red;
+		color: white;
+		margin-top: 6%;
+	}
+	.fourther {
+		width: 15%;
+		height: max-content;
+		min-height: 40px;
+		text-align: center;
+		font-size: 18px;
+		background: transparent;
+		color: white;
+		border-color: white;
+	}
+	.five {
+		font-size: 40px;
+		color: red;
+	}
+	.spa {
+		color: red;
+		font-size: 40px;
+	}
+	.fa {
+		font-size: 20px;
+		font-weight: 80;
+	}
+	.header {
+		background-color: black;
+		color: white;
+		width: 100%;
+		height: 11vh;
+		position: sticky;
+		top: 0;
+		z-index: 1;
+	}
+	.sechead {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 60%;
+		
+	}
+	.six {
+		font-size: 15px;
+		padding-left: 1em;
+		text-decoration: none;
+		color: white;
+	}
+	.six:hover {
+		font-size: 15px;
+		padding-left: 1em;
+		color: red;
+		text-decoration: none;
+	}
+	.seven {
+		background-color: red;
+		width: 100%;
+		height: 1vh;
+		position: sticky;
+		top: 0;
+		z-index: 1;
+	}
+	.sev {
+		padding-top: 2em;
+		font-size: 32px;
+	}
+	.eight {
+		background-color: black;
+		width: 7%;
+		height: 1vh;
+	}
+	.eighte {
+		background-color: white;
+		width: 12%;
+		height: 1vh;
+	}
+	.eights {
+		background-color: black;
+		width: 13%;
+		height: 1vh;
+		opacity: 0.7;
+	}
+	.first {
+		width: 25%;
+		height: max-content;
+		min-height: 30%;
+		padding-left: 2em;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	.twenty {
+		width: 40%;
+		height: max-content;
+		min-height: 50vh;
+		padding-left: 4em;
+	}
+	.octagon {
+		width: 50%;
+		height: 25vh;
+		background: red;
+		border-radius: 45px;
+	}
+	.octagons {
+		width: 60%;
+		height: 45vh;
+		background: url("../media/images/downpic.jpg");
+		border-radius: 75px;
+	}
+	.test {
+		display: none;
+	}
+	.bef {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin-top: 2em;
+	}
+	.col {
+		width: 50%;
+		height: max-content;
+		padding-left: 4em;
+	}
+	.htmls {
+		width: 100%;
+		background-color: rgb(223, 220, 220);
+		margin: 0;
+		display: flex;
+		height: 5vh;
+	}
+	.name {
+		width: 20%;
+		text-align: center;
+		background-color: red;
+		color: white;
+		padding-top: 5px;
+	}
+	.thirdef {
+		font-size: 21px;
+		font-weight: 80;
+		opacity: 0.8;
+		color: white;
+	}
+	.htle {
+		width: 70%;
+		background-color: rgb(250, 78, 78);
+	}
+	.csle {
+		width: 68%;
+		background-color: rgb(250, 78, 78);
+	}
+	.jale {
+		width: 60%;
+		background-color: rgb(250, 78, 78);
+	}
+	.pyle {
+		width: 70%;
+		background-color: rgb(250, 78, 78);
+	}
+	.tkle {
+		width: 66%;
+		background-color: rgb(250, 78, 78);
+	}
+	.pgle {
+		width: 54%;
+		background-color: rgb(250, 78, 78);
+	}
+	.djle {
+		width: 73%;
+		background-color: rgb(250, 78, 78);
+	}
+	.drle {
+		width: 54%;
+		background-color: rgb(250, 78, 78);
+	}
+	.rele {
+		width: 40%;
+		background-color: rgb(250, 78, 78);
+	}
+	.sqle {
+		width: 65%;
+		background-color: rgb(250, 78, 78);
+	}
+	.pole {
+		width: 62%;
+		background-color: rgb(250, 78, 78);
+	}
+	.num {
+		padding-left: 3%;
+		padding-top: 1%;
+		font-size: 18px;
+	}
+	.dix {
+		display: flex;
+		justify-content: space-around;
+		width: 94%;
+		align-items: center;
+	}
+	.pro {
+		width: 100%;
+		height: max-content;
+		min-height: 60vh;
+		background-color: rgb(250, 248, 249);
+	}
+	.thirty {
+		width: 70%;
+		height: max-content;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.ti1 {
+		color: white;
+		padding-top: 2em;
+		margin-bottom: 0;
+	}
+	.pi1 {
+		color: red;
+		padding-bottom: 1em;
+		margin-top: 0;
+	}
+	
+	
+	
+	
+	
+	.div1 {
+		width: 47%;
+		height: 48vh;
+		margin-bottom: 1em;
+	}
+	.img1 {
+		width: 100%;
+		height: 100%;
+		background-image: url("../media/images/todo.png");
+	}
+	.op1 {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0;
+	}
+	.op1:hover {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 1;
+	}
+	
+	
+	.div2 {
+		width: 47%;
+		height: 48vh;
+		margin-bottom: 1em;
+	}
+	.img2 {
+		width: 100%;
+		height: 100%;
+		background-image: url("../media/images/flash.png");
+	}
+	.op2 {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0;
+	}
+	.op2:hover {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 1;
+	}
+	
+	
+	.div3 {
+		width: 47%;
+		height: 48vh;
+		margin-bottom: 1em;
+	}
+	.img3 {
+		width: 100%;
+		height: 100%;
+		background-image: url("../media/images/note.png");
+	}
+	.op3 {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0;
+	}
+	.op3:hover {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 1;
+	}
+	
+	
+	.div4 {
+		width: 47%;
+		height: 48vh;
+		margin-bottom: 1em;
+	}
+	.img4 {
+		width: 100%;
+		height: 100%;
+		background-image: url("../media/images/pinterest.png");
+	}
+	.op4 {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0;
+		
+	}
+	.op4:hover {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 1;
+	}
+	
+	
+	.div5 {
+		width: 47%;
+		height: 48vh;
+		margin-bottom: 1em;
+	}
+	.img5 {
+		width: 100%;
+		height: 100%;
+		background-image: url("../media/images/project.png");
+	}
+	.op5 {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0;
+	}
+	.op5:hover {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 1;
+	}
+	
+	
+	.div6 {
+		width: 47%;
+		height: 48vh;
+		margin-bottom: 1em;
+	}
+	.img6 {
+		width: 100%;
+		height: 100%;
+		background-image: url("../media/images/tip.png");
+	}
+	.op6 {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0;
+		
+	}
+	.op6:hover {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 1;
+	}
+	a {
+		text-decoration: none;
+	}
+	
+	.div7 {
+		width: 47%;
+		height: 48vh;
+	}
+	.img7 {
+		width: 100%;
+		height: 100%;
+		background-image: url("../media/images/shop.png");
+	}
+	.op7 {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0;
+		
+	}
+	.op7:hover {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 1;
+	}
+	
+	.div8 {
+		width: 47%;
+		height: 48vh;
+	}
+	.img8 {
+		width: 100%;
+		height: 100%;
+		background-image: url("../media/images/chat.png");
+	}
+	.op8 {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0;
+		
+	}
+	.op8:hover {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 1;
+	}
+	
+	
+	.cent {
+		width: 80%;
+		height: max-content;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: auto;
+	}
+	
+	.blog1 {
+		width: 49%;
+		height: 100vh;
+	}
+	.mag1 {
+		width: 100%;
+		height: 50vh;
+		background-image: url("../media/images/block.jpg");
+	}
+	.mag2 {
+		width: 100%;
+		height: 50vh;
+		background-image: url("../media/images/coffee.jpg");
+	}
+	.mag3 {
+		width: 100%;
+		height: 50vh;
+		background-image: url("../media/images/bike.jpg");
+	}
+	.mag4 {
+		width: 100%;
+		height: 50vh;
+		background-image: url("../media/images/tool.jpg");
+	}
+	.fa1 {
+		opacity: 0.6;
+	}
+	.fa2 {
+		opacity: 0.7;
+	}
+	
+	
+	.contact {
+		width: 100%;
+		height: max-content;
+		min-height: 60vh;
+		background-color: #252934;
+		color: white;
+	}
+	.in1 {
+		width: 55%;
+		height: max-content;
+		min-height: 9vh;
+		font-size: 16px;
+		background-color: #1e242c;
+		border: none;
+		color: gray;
+		padding-left: 1em;
+	}
+	.in2 {
+		width: 55%;
+		height: max-content;
+		min-height: 25vh;
+		font-size: 16px;
+		background-color: #1e242c;
+		border: none;
+		color: gray;
+		padding-top: 0;
+		padding-left: 1em;
+	}
+	.footer {
+		width: 100%;
+		height: max-content;
+		min-height: 30vh;
+		background-color: #1b242f;
+	}
+	.go {
+		width: 5%;
+		height: 10vh;
+		background-color: red;
+	}
+	.gos {
+		width: 15%;
+		height: 10vh;
+		background-color: #262f38;
+		margin-bottom: 1em;
+	}
+	.flex1 {
+		width: 30%;
+		height: max-content;
+		min-height: 20vh;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	#far {
+		font-size: 70px;
+		color: white;
+		text-align: center;
+		padding-top: 20%;
+	}
+	#fart {
+		padding-top: 20%;
+		color: white;
+		font-size: 24px;
+	}
+	#farts {
+		padding-top: 8%;
+		color: white;
+		font-size: 44px;
+		text-decoration: none;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	@media(max-width: 600px){
+		body {
+		margin: 0;
+		padding: 0;
+		font-family: Raleway;
+		width: 100%;
+		overflow-x: hidden;
+	}
+	.one {
+		width: 100%;
+		height: 100vh;
+		background: url("../media/images/portf.png");
+		margin: 0;
+		padding: 0;
+		overflow-x: hidden;
+	}
+	.second {
+		color: white;
+		padding-top: 50%;
+	}
+	.third {
+		font-size: 25px;
+		margin-bottom: 0;
+	}
+	.thirde {
+		font-size: 28px;
+		margin-bottom: 0;
+		opacity: 0.7;
+	}
+	.thirds {
+		font-size: 18px;
+		font-weight: 80;
+		margin-top: 0;
+		opacity: 0.6;
+	}
+	.thirdse {
+		font-size: 18px;
+		font-weight: 80;
+		margin-top: 0;
+		opacity: 0.6;
+	}
+	.blu {
+		font-size: 18px;
+		font-weight: 80;
+		margin-top: 0;
+		opacity: 0.8;
+		color: red;
+	}
+	.thir {
+		font-size: 25px;
+		margin-top: 0;
+	}
+	.four {
+		width: max-content;
+		min-width: 21%;
+		height: 50px;
+		text-align: center;
+		font-size: 25px;
+		background: transparent;
+		border-color: white;
+		color: white;
+	}
+	.four:hover {
+		width: max-content;
+		min-width: 21%;
+		height: 50px;
+		text-align: center;
+		font-size: 25px;
+		background-color: red;
+		border-color: white;
+		color: white;
+	}
+	.fourths {
+		width: 70%;
+		height: max-content;
+		min-height: 50px;
+		text-align: center;
+		font-size: 18px;
+		background: transparent;
+		border-color: red;
+		color: white;
+		margin-top: 6%;
+	}
+	.fourther {
+		width: 20%;
+		height: max-content;
+		min-height: 40px;
+		text-align: center;
+		font-size: 18px;
+		background: transparent;
+		color: white;
+		border-color: white;
+		margin-left: 1%;
+	}
+	.five {
+		font-size: 40px;
+		color: red;
+	}
+	.spa {
+		color: red;
+		font-size: 27px;
+	}
+	.fa {
+		font-size: 20px;
+		font-weight: 80;
+	}
+	.header {
+		background-color: black;
+		color: white;
+		width: 100%;
+		height: 9vh;
+		position: sticky;
+		top: 0;
+		display: flex;
+		z-index: 1;
+		overflow-x: hidden;
+	}
+	.sechead {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 60%;
+		display: none;
+	}
+	.drop {
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+		width: 100%;
+		height: 33vh;
+		background-color: #1e242c;
+		display: none;
+		position: sticky;
+		top: 0;
+		padding: 1em;
+		padding-bottom: 6em;
+		margin-top: 0;
+		z-index: 1;
+	}
+	.aww {
+		width: 40%;
+		display: block;
+		padding-left: 90%;
+	}
+	#farts {
+		display: block;
+		font-size: 30px;
+	}
+	#fartse {
+		display: block;
+		font-size: 33px;
+		color: white;
+		padding-bottom: 2em;
+	}
+	.six {
+		font-size: 15px;
+		padding-left: 1em;
+		text-decoration: none;
+		color: white;
+	}
+	.six:hover {
+		font-size: 15px;
+		padding-left: 1em;
+		color: red;
+		text-decoration: none;
+	}
+	.seven {
+		background-color: red;
+		width: 100%;
+		height: 1vh;
+		position: sticky;
+		top: 0;
+		margin-bottom: 0;
+		z-index: 1;
+	}
+	.sev {
+		padding-top: 2em;
+		font-size: 32px;
+	}
+	.eight {
+		background-color: black;
+		width: 7%;
+		height: 1vh;
+	}
+	.eighte {
+		background-color: white;
+		width: 12%;
+		height: 1vh;
+	}
+	.eights {
+		background-color: black;
+		width: 13%;
+		height: 1vh;
+		opacity: 0.7;
+	}
+	.first {
+		width: 80%;
+		height: max-content;
+		min-height: 30%;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	.twenty {
+		width: 98%;
+		height: max-content;
+		min-height: 50vh;
+		padding-left: 1em;
+	}
+	.octagon {
+		width: 50%;
+		height: 25vh;
+		background: red;
+		border-radius: 45px;
+	}
+	.octagons {
+		width: 60%;
+		height: 30vh;
+		background: url("../media/images/downpic.jpg");
+		border-radius: 75px;
+	}
+	.test {
+		display: none;
+	}
+	.bef {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin-top: 2em;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+	.col {
+		width: 98%;
+		height: max-content;
+		padding-left: 1em;
+	}
+	.htmls {
+		width: 100%;
+		background-color: rgb(223, 220, 220);
+		margin: 0;
+		display: flex;
+		height: 5vh;
+	}
+	.name {
+		width: 20%;
+		text-align: center;
+		background-color: red;
+		color: white;
+		padding-top: 5px;
+	}
+	.thirdef {
+		font-size: 21px;
+		font-weight: 80;
+		opacity: 0.8;
+		color: white;
+	}
+	.htle {
+		width: 70%;
+		background-color: rgb(250, 78, 78);
+	}
+	.csle {
+		width: 68%;
+		background-color: rgb(250, 78, 78);
+	}
+	.jale {
+		width: 60%;
+		background-color: rgb(250, 78, 78);
+	}
+	.pyle {
+		width: 70%;
+		background-color: rgb(250, 78, 78);
+	}
+	.tkle {
+		width: 66%;
+		background-color: rgb(250, 78, 78);
+	}
+	.pgle {
+		width: 54%;
+		background-color: rgb(250, 78, 78);
+	}
+	.djle {
+		width: 73%;
+		background-color: rgb(250, 78, 78);
+	}
+	.drle {
+		width: 54%;
+		background-color: rgb(250, 78, 78);
+	}
+	.rele {
+		width: 40%;
+		background-color: rgb(250, 78, 78);
+	}
+	.sqle {
+		width: 65%;
+		background-color: rgb(250, 78, 78);
+	}
+	.pole {
+		width: 62%;
+		background-color: rgb(250, 78, 78);
+	}
+	.num {
+		padding-left: 3%;
+		padding-top: 1%;
+		font-size: 18px;
+	}
+	.dix {
+		display: flex;
+		justify-content: space-around;
+		width: 94%;
+		align-items: center;
+		flex-direction: column;
+		overflow-x: hidden;
+	}
+	.pro {
+		width: 100%;
+		height: max-content;
+		min-height: 60vh;
+		background-color: rgb(250, 248, 249);
+		overflow-x: hidden;
+	}
+	.thirty {
+		width: 70%;
+		height: max-content;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	
+	
+	
+	
+	
+	.div1 {
+		width: 94%;
+		height: 48vh;
+		margin-bottom: 1em;
+	}
+	.img1 {
+		width: 100%;
+		height: 100%;
+		background-image: url("../media/images/todo.png");
+	}
+	.op1 {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0;
+	}
+	.op1:hover {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 1;
+	}
+	.ti1 {
+		color: white;
+		padding-top: 2em;
+		margin-bottom: 0;
+	}
+	.pi1 {
+		color: red;
+		padding-bottom: 1em;
+		margin-top: 0;
+	}
+	
+	
+	.div2 {
+		width: 94%;
+		height: 48vh;
+		margin-bottom: 1em;
+	}
+	.img2 {
+		width: 100%;
+		height: 100%;
+		background-image: url("../media/images/flash.png");
+	}
+	.op2 {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0;
+	}
+	.op2:hover {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 1;
+	}
+	
+	
+	.div3 {
+		width: 94%;
+		height: 48vh;
+		margin-bottom: 1em;
+	}
+	.img3 {
+		width: 100%;
+		height: 100%;
+		background-image: url("../media/images/note.png");
+	}
+	.op3 {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0;
+	}
+	.op3:hover {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 1;
+	}
+	
+	
+	.div4 {
+		width: 94%;
+		height: 48vh;
+		margin-bottom: 1em;
+	}
+	.img4 {
+		width: 100%;
+		height: 100%;
+		background-image: url("../media/images/pinterest.png");
+	}
+	.op4 {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0;
+		
+	}
+	.op4:hover {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 1;
+	}
+	
+	
+	.div5 {
+		width: 94%;
+		height: 48vh;
+		margin-bottom: 1em;
+	}
+	.img5 {
+		width: 100%;
+		height: 100%;
+		background-image: url("../media/images/project.png");
+	}
+	.op5 {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0;
+	}
+	.op5:hover {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 1;
+	}
+	
+	
+	.div6 {
+		width: 94%;
+		height: 48vh;
+		margin-bottom: 1em;
+	}
+	.img6 {
+		width: 100%;
+		height: 100%;
+		background-image: url("../media/images/tip.png");
+	}
+	.op6 {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0;
+		
+	}
+	.op6:hover {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 1;
+	}
+	a {
+		text-decoration: none;
+	}
+	
+	.div7 {
+		width: 94%;
+		height: 48vh;
+		margin-bottom: 1em;
+	}
+	.img7 {
+		width: 100%;
+		height: 100%;
+		background-image: url("../media/images/shop.png");
+	}
+	.op7 {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0;
+		
+	}
+	.op7:hover {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 1;
+	}
+	
+	.div8 {
+		width: 94%;
+		height: 48vh;
+	}
+	.img8 {
+		width: 100%;
+		height: 100%;
+		background-image: url("../media/images/chat.png");
+	}
+	.op8 {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0;
+		
+	}
+	.op8:hover {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 1;
+	}
+	
+	
+	.cent {
+		width: 80%;
+		height: max-content;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: auto;
+	}
+	
+	.blog1 {
+		width: 96%;
+		height: 100vh;
+	}
+	.mag1 {
+		width: 100%;
+		height: 50vh;
+		background-image: url("../media/images/block.jpg");
+	}
+	.mag2 {
+		width: 100%;
+		height: 50vh;
+		background-image: url("../media/images/coffee.jpg");
+	}
+	.mag3 {
+		width: 100%;
+		height: 50vh;
+		background-image: url("../media/images/bike.jpg");
+	}
+	.mag4 {
+		width: 100%;
+		height: 50vh;
+		background-image: url("../media/images/tool.jpg");
+	}
+	.fa1 {
+		opacity: 0.6;
+	}
+	.fa2 {
+		opacity: 0.7;
+	}
+	
+	
+	.contact {
+		width: 100%;
+		height: max-content;
+		min-height: 60vh;
+		background-color: #252934;
+		color: white;
+		overflow-x: hidden;
+	}
+	.in1 {
+		width: 55%;
+		height: max-content;
+		min-height: 9vh;
+		font-size: 16px;
+		background-color: #1e242c;
+		border: none;
+		color: gray;
+		padding-left: 1em;
+	}
+	.in2 {
+		width: 55%;
+		height: max-content;
+		min-height: 25vh;
+		font-size: 16px;
+		background-color: #1e242c;
+		border: none;
+		color: gray;
+		padding-top: 0;
+		padding-left: 1em;
+	}
+	.footer {
+		width: 100%;
+		height: max-content;
+		min-height: 30vh;
+		background-color: #1b242f;
+	}
+	.go {
+		width: 17%;
+		height: 10vh;
+		background-color: red;
+	}
+	.gos {
+		width: 24%;
+		height: 10vh;
+		background-color: #262f38;
+		margin-bottom: 1em;
+	}
+	.flex1 {
+		width: 90%;
+		height: max-content;
+		min-height: 20vh;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	#far {
+		font-size: 70px;
+		color: white;
+		text-align: center;
+		padding-top: 20%;
+	}
+	#fart {
+		padding-top: 20%;
+		color: white;
+		font-size: 24px;
+	}
+	#farts {
+		padding-top: 20%;
+		color: white;
+		font-size: 34px;
+		text-decoration: none;
+	}
+	
+	}
+</style>
+<a id="a1" /><div class="one">
+	<center>
+	<div class="second" data-aos="fade-down">
+		<h1 class="third">Hello, I'm <span class="spa">Usman malik</span>.</h1>
+		<h1 class="thir">I'm a Full-stack web Developer.</h1>
+		<center>
+		<a href="#a2"><button class="four">View my work <i class="fa fa-arrow-right"></i></button></a>
+		</center>
+	</div>
+	</center>
+</div>
+<a id="a2" /><div class="header">
+	<div class="sechead">
+		<a href="#a1"><p class="six">HOME</p></a>
+		<a href="#a2"><p class="six">ABOUT</p></a>
+		<a href="#a3"><p class="six">PORTFOLIO</p></a>
+		<a href="#a4"><p class="six">BLOG</p></a>
+		<a href="#a5"><p class="six">CONTACT</p></a>
+	</div>
+	<div class="aww">
+	<i class="fa fa-bars" id="farts" onclick="gred()"></i>
+	</div>
+</div>
+<div class="seven"></div>
+<div class="drop" id="dro" data-aos="fade-down">
+		<center>
+			<i class="fa fa-times" id="fartse" onclick="greds()"></i>
+		</center>
+		<a href="#a1"><p class="six">HOME</p></a>
+		<a href="#a2"><p class="six">ABOUT</p></a>
+		<a href="#a3"><p class="six">PORTFOLIO</p></a>
+		<a href="#a4"><p class="six">BLOG</p></a>
+		<a href="#a5"><p class="six">CONTACT</p></a>
+</div>
+<center>
+<h1 class="sev" data-aos="fade-right">ABOUT</h1>
+<div class="eight" data-aos="fade-left"></div>
+</center>
+<div class="bef" onclick="greds()">
+<div class="first">
+	<div class="octagon" data-aos="flip-right"><center><i class="fa fa-tachometer" id="far"></i></center></div>
+	<h1 class="thirde" data-aos="zoom-in">FAST</h1>
+	<center>
+	<h4 class="thirds" data-aos="zoom-in">Fast load times and lag free interaction, my highest priority.</h4>
+	</center>
+</div>
+
+<div class="first">
+	<div class="octagon" data-aos="flip-left"><center><i class="fa fa-laptop" id="far"></i></center></div>
+	<h1 class="thirde" data-aos="zoom-in">RESPONSIVE</h1>
+	<center>
+	<h4 class="thirds" data-aos="zoom-in">My layouts will work on any device, big or small. Intuitive Strong preference for </h4>
+	</center>
+</div>
+
+<div class="first">
+	<div class="octagon" data-aos="flip-right"><center><i class="fa fa-lightbulb-o" id="far"></i></center></div>
+	<h1 class="thirde" data-aos="zoom-in">INTUITIVE</h1>
+	<center>
+	<h4 class="thirds" data-aos="zoom-in">Strong preference for easy to use, intuitive UX/UI.</h4>
+	</center>
+</div>
+
+<div class="first">
+	<div class="octagon" data-aos="flip-left"><center><i class="fa fa-rocket" id="far"></i></center></div>
+	<h1 class="thirde" data-aos="zoom-in">DYNAMIC</h1>
+	<center>
+	<h4 class="thirds" data-aos="zoom-in">Websites don't have to be static, I love making pages come to life</h4>
+	</center>
+</div>
+</div>
+<br><br><br>
+</div>
+<div class="dix" onclick="greds()">
+	<div class="twenty" data-aos="fade-right">
+	<center>
+		<div class="octagons"></div>
+		<h2 class="thirde">Who's this guy?</h2>
+			<h4 class="thirdse">I'm a Full-stack Developer at <span class="blu">Allper</span> in Lagos, NG</h4>
+			<h4 class="thirdse">I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences</h4>
+			<a href="#a5"><h4 class="thirdse"><span class="blu">Let's make something special.</span></h4></a>
+	</center>
+	</div>
+	<div class="col">
+		<div class="htmls">
+		<div class="name">HTML</div>
+		<div class="htle" data-aos="zoom-in"></div>
+		<div class="num">90%</div>
+		</div>
+		<br>
+		<div class="htmls">
+		<div class="name">CSS</div>
+		<div class="csle" data-aos="zoom-in"></div>
+		<div class="num">88%</div>
+		</div>
+		<br>
+		<div class="htmls">
+		<div class="name">JAVASCRIPT</div>
+		<div class="jale" data-aos="zoom-in"></div>
+		<div class="num">80%</div>
+		</div>
+		<br>
+		<div class="htmls">
+		<div class="name">PYTHON</div>
+		<div class="pyle" data-aos="zoom-in"></div>
+		<div class="num">90%</div>
+		</div>
+		<br>
+		<div class="htmls">
+		<div class="name">TKINTER</div>
+		<div class="tkle" data-aos="zoom-in"></div>
+		<div class="num">86%</div>
+		</div>
+		<br>
+		<div class="htmls">
+		<div class="name">PYGAME</div>
+		<div class="pgle" data-aos="zoom-in"></div>
+		<div class="num">74%</div>
+		</div>
+		<br>
+		<div class="htmls">
+		<div class="name">DJANGO</div>
+		<div class="djle" data-aos="zoom-in"></div>
+		<div class="num">93%</div>
+		</div>
+		<br>
+		<div class="htmls">
+		<div class="name">DRF</div>
+		<div class="drle" data-aos="zoom-in"></div>
+		<div class="num">74%</div>
+		</div>
+		<br>
+		<div class="htmls">
+		<div class="name">REACT</div>
+		<div class="rele" data-aos="zoom-in"></div>
+		<div class="num">40%</div>
+		</div>
+		<br>
+		<div class="htmls">
+		<div class="name">sqlite3</div>
+		<div class="sqle" data-aos="zoom-in"></div>
+		<div class="num">85%</div>
+		</div>
+		<br>
+		<div class="htmls">
+		<div class="name">POSGRESSQL</div>
+		<div class="pole" data-aos="zoom-in"></div>
+		<div class="num">82%</div>
+		</div>
+	</div>
+</div>
+<br><br><br>
+<a id="a3" />
+<div class="pro" onclick="greds()">
+<center>
+	<h1 class="sev" data-aos="fade-left">PROJECTS</h1>
+	<div class="eight" data-aos="fade-right"></div>
+</center>
+<br><br>
+<center>
+	<div class="thirty">
+		<div class="div1" data-aos="fade-left">
+			<div class="img1">
+				<div class="op1">
+					<center>
+						<h2 class="ti1" data-aos="fade-down">ITodo</h2>
+						<p class="pi1" data-aos="fade-down">Django</p>
+						<a href="{% url 'pageone' %}" data-aos="fade-up"><button class="fourths">Learn More</button></a>
+					</center>
+				</div>
+			</div>
+		</div>
+		<div class="div2" data-aos="fade-right">
+			<div class="img2">
+				<div class="op2">
+				<center>
+						<h2 class="ti1" data-aos="fade-down">Flash card</h2>
+						<p class="pi1" data-aos="fade-down">Django/javascript</p>
+						<a href="{% url 'pagetwo' %}" data-aos="fade-up"><button class="fourths">Learn More</button></a>
+				</center>
+				</div>
+			</div>
+		</div>
+		
+		<div class="div3" data-aos="fade-left">
+			<div class="img3">
+				<div class="op3">
+				<center>
+						<h2 class="ti1" data-aos="fade-down">INote</h2>
+						<p class="pi1" data-aos="fade-down">Django/css</p>
+						<a href="{% url 'pagethree' %}" data-aos="fade-up"><button class="fourths">Learn More</button></a>
+				</center>
+				</div>
+			</div>
+		</div>
+		
+		<div class="div4" data-aos="fade-right">
+			<div class="img4">
+				<div class="op4">
+				<center>
+						<h2 class="ti1" data-aos="fade-down">Minterest(pinterest clone)</h2>
+						<p class="pi1" data-aos="fade-down">Django/css/javascript</p>
+						<a href="{% url 'pagefour' %}" data-aos="fade-up"><button class="fourths">Learn More</button></a>
+				</center>
+				</div>
+			</div>
+		</div>
+		
+		<div class="div5" data-aos="fade-left">
+			<div class="img5">
+				<div class="op5">
+				<center>
+						<h2 class="ti1" data-aos="fade-down">Mick chat</h2>
+						<p class="pi1" data-aos="fade-down">Django/css/javascript</p>
+						<a href="{% url 'pagefive' %}" data-aos="fade-up"><button class="fourths">Learn More</button></a>
+				</center>
+				</div>
+			</div>
+		</div>
+		
+		<div class="div6" data-aos="fade-right">
+			<div class="img6">
+				<div class="op6">
+				<center>
+						<h2 class="ti1" data-aos="fade-down">ITip</h2>
+						<p class="pi1" data-aos="fade-down">Html/css/javascript</p>
+						<<a href="{% url 'pagesix' %}" data-aos="fade-up"><button class="fourths">Learn More</button></a>
+				</center>
+				</div>
+			</div>
+		</div>
+		
+		<div class="div7" data-aos="fade-left">
+			<div class="img7">
+				<div class="op7">
+				<center>
+						<h2 class="ti1" data-aos="fade-down">Mick Shop</h2>
+						<p class="pi1" data-aos="fade-down">Html/css/javascript/Django</p>
+						<<a href="{% url 'pageseven' %}" data-aos="fade-up"><button class="fourths">Learn More</button></a>
+				</center>
+				</div>
+			</div>
+		</div>
+		
+		<div class="div8" data-aos="fade-right">
+			<div class="img8">
+				<div class="op8">
+				<center>
+						<h2 class="ti1" data-aos="fade-down">Pertalk</h2>
+						<p class="pi1" data-aos="fade-down">Html/css/javascript/Django</p>
+						<<a href="{% url 'pageeight' %}" data-aos="fade-up"><button class="fourths">Learn More</button></a>
+				</center>
+				</div>
+			</div>
+		</div>
+	</div>
+</center>
+	<br><br><br><br><br>
+</div>
+<br><br><br>
+<center>
+<a id="a4" /><h1 class="sev" data-aos="fade-right">BLOGS</h1>
+<div class="eight" data-aos="fade-left"></div>
+</center>
+<br><br><br>
+<div class="cent" onclick="greds()">
+	<div class="blog1" data-aos="zoom-in">
+		<div class="mag1"></div>
+		<h2 class="fa2">Breaking Your coders block</h2>
+		<h5 class="fa1">APRIL 29, 2016</h5>
+		<div class="eights"></div>
+		<h3 class="fa1">At one time or another, as a developer, we've all found ourselves hopelessly stuck on a coding issue...</h3>
+	</div>
+	
+	<div class="blog1" data-aos="zoom-out">
+		<div class="mag2"></div>
+		<h2 class="fa2">!Awake: This is Your Brain on Caffeine</h2>
+		<h5 class="fa1">APRIL 29, 2016</h5>
+		<div class="eights"></div>
+		<h3 class="fa1">If there's one thing I can truly claim to be an expert on, it's staying awake. For five years I struggled to stay employed...</h3>
+	</div>
+	
+	<div class="blog1">
+		<div class="mag3" data-aos="zoom-in"></div>
+		<h2 class="fa2">Getting a Handle on Handlebars</h2>
+		<h5 class="fa1">APRIL 29, 2016</h5>
+		<div class="eights"></div>
+		<h3 class="fa1">Here at EyeCue Lab we render most of our data-laden HTML pages in Handlebar templates...</h3>
+	</div>
+	
+	<div class="blog1" data-aos="zoom-out">
+		<div class="mag4"></div>
+		<h2 class="fa2">5 Extensions for Your Chrome Toolbelt</h2>
+		<h5 class="fa1">APRIL 29, 2016</h5>
+		<div class="eights"></div>
+		<h3 class="fa1">If you're not using Google Chrome as a front-end web developer, you're missing out. Not only is Chrome the...</h3>
+	</div>
+</div>
+<br><br><br>
+
+<a id="a5" /><div class="contact" onclick="greds()">
+	<center>
+		<h1 class="sev" data-aos="fade-left">CONTACT</h1>
+		<div class="eighte" data-aos="fade-right"></div>
+	</center>
+	<br>
+	<center>
+		<h3 style="color: red" data-aos="flip-right">Have a question or want to work together?</h3>
+		<form  method="post">
+		{% csrf_token %}
+		<input type="text" class="in1" placeholder="Name" name="message-name" data-aos="zoom-out"></input>
+		<br><br>
+		<input type="text" class="in1" placeholder="Enter Email" name="message-email" data-aos="zoom-out"></input>
+		<br><br>
+		<input type="text" class="in2" placeholder="Message" name="message" data-aos="zoom-out">
+		<br><br>
+		<button class="fourther" data-aos="zoom-out">Submit</button>
+		</form>
+	</center>
+	<br><br><br>
+</div>
+<div class="footer" onclick="greds()">
+	<center>
+		<div class="go">
+			<a href="#"><i class="fa fa-angle-double-up" id="farts" data-aos="zoom-in"></i></a>
+		</div>
+		<div class="flex1">
+			<div class="gos"><a href="https://wa.me/2348125801435"><i class="fa fa-whatsapp" id="fart"></i></a></div>
+			<div class="gos"><a href="https://facebook.com/profile.php?id=100076342934651"><i class="fa fa-facebook" id="fart"></i></a></div>
+			<div class="gos"><a href="https://github.com/pygeek-py"><i class="fa fa-github" id="fart"></i></a></div>
+			<div class="gos"><i class="fa fa-twitter" id="fart"></i></div>
+		</div>
+	</center>
+</div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script type="text/javascript">
+
+function gred(){
+	var a = document.getElementById('dro');
+	a.style.display = "block";
+}
+function greds(){
+	var a = document.getElementById('dro');
+	a.style.display = "none";
+}
+
+AOS.init({
+	duration: 2000,
+});
+
+</script>
+{% endblock %}
+send_mail(
+            'Message from: ' + name, # subject
+            message, # message
+            email, # from email
+            ['usmanmalikpg2010@gmail.com', 'abdulazeezusman017@gmail.com'], # to email
+        )

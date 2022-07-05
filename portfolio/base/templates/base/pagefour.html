@@ -1,0 +1,116 @@
+{% extends 'base/base.html' %}
+
+{% block body %}
+<style type="text/css">
+	.container {
+		width: 100%;
+		max-width: 390px;
+		height: max-content;
+		min-height: 440px;
+		margin: 0 auto;
+		box-shadow: 0px 10px 30px rgb(71, 71, 71);
+		font-family: sans-serif;
+	}
+	.mag {
+		width: 100%;
+		height: 35vh;
+	}
+	.first {
+		opacity: 0.8;
+		font-size: 18px;
+		padding-left: 1em;
+	}
+	.fa {
+		font-size: 25px;
+		color: black;
+	}
+	.flex1 {
+		width: 90%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	a {
+		text-decoration: none;
+		color: black;
+	}
+	#mag1 {
+		display: block;
+		background-image: url("../media/images/pinterestma.png");
+	}
+	#mag2 {
+		display: none;
+		background-image: url("../media/images/pinterestlog.png");
+	}
+	#mag3 {
+		display: none;
+		background-image: url("../media/images/pinterstpi.png");
+	}
+	#mag4 {
+		display: none;
+		background-image: url("../media/images/pinterstge.png");
+	}
+	#fam {
+		float: right;
+		padding-top: 4em;
+		font-size: 21px;
+		color: white;
+		opacity: 0.8;
+	}
+</style>
+<div class="container">
+	<div class="mag" id="mag1"><i class="fa fa-arrow-right" onclick="magone()" id="fam"></i></div>
+	<div class="mag" id="mag2"><i class="fa fa-arrow-right" onclick="magtwo()" id="fam"></i></div>
+	<div class="mag" id="mag3"><i class="fa fa-arrow-right" onclick="magthree()" id="fam"></i></div>
+	<div class="mag" id="mag4"><i class="fa fa-arrow-right" onclick="magfour()" id="fam"></i></div>
+	<h3 class="first">Minterest is a image sharing and social media service designed to enable saving discovery of information on the internet using images.</h3>
+	<center>
+	<div class="flex1">
+		<a href="http://myitodo.herokuapp.com/"><i class="fa fa-arrow-up"></i></a>
+		<a href="{% url 'home' %}"><i class="fa fa-times"></i></a>
+	</div>
+	</center>
+</div>
+<script type="text/javascript">
+	function magone(){
+		var a = document.getElementById('mag1');
+		a.style.display = "none";
+		var b = document.getElementById('mag2');
+		b.style.display = "block";
+		var c = document.getElementById('mag3');
+		c.style.display = "none"
+		var d = document.getElementById('mag4');
+		d.style.display = "none"
+	}
+	function magtwo(){
+		var a = document.getElementById('mag1');
+		a.style.display = "none";
+		var b = document.getElementById('mag2');
+		b.style.display = "none";
+		var c = document.getElementById('mag3');
+		c.style.display = "block"
+		var d = document.getElementById('mag4');
+		d.style.display = "none"
+	}
+	function magthree(){
+		var a = document.getElementById('mag1');
+		a.style.display = "none";
+		var b = document.getElementById('mag2');
+		b.style.display = "none";
+		var c = document.getElementById('mag3');
+		c.style.display = "none"
+		var d = document.getElementById('mag4');
+		d.style.display = "block"
+	}
+	function magfour(){
+		var a = document.getElementById('mag1');
+		a.style.display = "block";
+		var b = document.getElementById('mag2');
+		b.style.display = "none";
+		var c = document.getElementById('mag3');
+		c.style.display = "none"
+		var d = document.getElementById('mag4');
+		d.style.display = "none"
+	}
+</script>
+{% endblock %}

@@ -40,15 +40,15 @@
 	}
 	#mag2 {
 		display: none;
-		background-image: url("../media/images/todo.png");
+		background-image: url("../media/images/project.png");
 	}
 	#mag3 {
 		display: none;
-		background-image: url("../media/images/note.png");
+		background-image: url("../media/images/project.png");
 	}
 	#mag4 {
 		display: none;
-		background-image: url("../media/images/flash.png");
+		background-image: url("../media/images/project.png");
 	}
 	#fam {
 		float: right;
@@ -66,7 +66,7 @@
 	<h3 class="first">Django Project is a website where you see projects that can help you improve your skill in Django from beginner to advance</h3>
 	<center>
 	<div class="flex1">
-		<a href="http://myitodo.herokuapp.com/"><i class="fa fa-arrow-up"></i></a>
+		<a href="{% url 'home' %}"><i class="fa fa-arrow-up"></i></a>
 		<a href="{% url 'home' %}"><i class="fa fa-times"></i></a>
 	</div>
 	</center>
